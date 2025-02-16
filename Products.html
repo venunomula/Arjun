@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            background-color: lightgray;
+            display: flex;
+        }
+        ul{
+            display: flex;
+            gap: 50px;
+            font-size: 20px;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            margin-left:100px;
+            position: relative;
+            top: 10px;
+            
+            
+        }
+        .row{
+            width: 100%;
+            height: 400px;
+            
+            margin-top: 10px;
+        }
+        .row img{
+            width: 300px;
+            height: 400px;
+            margin-left: 60px;
+            cursor: pointer;
+
+        }
+        #shirt{
+            color: gray;
+        }
+        .row .h1{
+            position: relative;
+            top: 10px;
+            left: 120px;
+            font-size: 20px;
+        }
+        .row .rating{
+            position: relative;
+            left: 115px;
+            top: 20px;
+        }
+        .row .p1{
+            position: relative;
+            left: 140px;
+            top: 30px;
+            font-size: 20px;
+        }
+        .row .h2{
+            position: relative;
+            top: -50px;
+            left: 500px;
+            font-size: 20px;
+        }
+        .row .rating2{
+            position: relative;
+            left: 500px;
+            top: -40px;
+        }
+        .row .p2{
+            position: relative;
+            left: 530px;
+            top: -30px;
+            font-size: 20px;
+        }
+        .row .h3{
+            position: relative;
+            top: -110px;
+            left: 850px;
+            font-size: 20px;
+        }
+        .row .rating3{
+            position: relative;
+            left: 850px;
+            top: -100px;
+        }
+        .row .p3{
+            position: relative;
+            left: 880px;
+            top: -90px;
+            font-size: 20px;
+        }
+        .row .h4{
+            position: relative;
+            top: -170px;
+            left: 1200px;
+            font-size: 20px;
+        }
+        .row .rating4{
+            position: relative;
+            left: 1220px;
+            top: -160px;
+        }
+        .row .p4{
+            position: relative;
+            left: 1250px;
+            top: -150px;
+            font-size: 20px;
+        }
+        .row2{
+            width: 100%;
+            height: 400px;
+            
+            margin-top: 120px;
+        }
+        .row2 img{
+            width: 300px;
+            height: 400px;
+            margin-left: 60px;
+            cursor: pointer;
+
+        }
+        .row2 .hh1{
+            position: relative;
+            top: 10px;
+            left: 120px;
+            font-size: 20px;
+        }
+        .row2 .rating11{
+            position: relative;
+            left: 115px;
+            top: 20px;
+        }
+        .row2 .pp1{
+            position: relative;
+            left: 140px;
+            top: 30px;
+            font-size: 20px;
+        }
+        .row2 .hh2{
+            position: relative;
+            top: -50px;
+            left: 500px;
+            font-size: 20px;
+        }
+        .row2 .rating22{
+            position: relative;
+            left: 500px;
+            top: -40px;
+        }
+        .row2 .pp2{
+            position: relative;
+            left: 530px;
+            top: -30px;
+            font-size: 20px;
+        }
+        .row2 .hh3{
+            position: relative;
+            top: -110px;
+            left: 850px;
+            font-size: 20px;
+        }
+        .row2 .rating33{
+            position: relative;
+            left: 850px;
+            top: -100px;
+        }
+        .row2 .pp3{
+            position: relative;
+            left: 880px;
+            top: -90px;
+            font-size: 20px;
+        }
+        .row2 .hh4{
+            position: relative;
+            top: -170px;
+            left: 1200px;
+            font-size: 20px;
+        }
+        .row2 .rating44{
+            position: relative;
+            left: 1220px;
+            top: -160px;
+        }
+        .row2 .pp4{
+            position: relative;
+            left: 1250px;
+            top: -150px;
+            font-size: 20px;
+        }
+        #menu-toggle{
+            display: none;
+            
+            cursor: pointer;
+        }
+        @media (max-width: 800px) {
+            .nav2 {
+                justify-content: space-between;
+                background-color: transparent;
+            }
+
+            #menu-toggle {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .nav2 ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                background: #333;
+                width: 50%;
+                padding: 10px 0;
+            }
+
+            .nav2 ul.show {
+                display: flex;
+            }
+
+           
+
+            .nav2 ul li a {
+                color: white;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product {
+                width: 90%;
+            }
+             .row img{
+            width: 200px;
+            height: 200px;
+            gap: 10px;
+             }
+             .row2 img{
+                position: relative;
+                top: 295px;
+            width: 200px;
+            height: 200px;
+            gap: 10px;
+             }
+            
+            .row .h1{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-750px
+             }
+             .row .rating{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-740px;
+                
+                
+             }
+             .row .p1{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-730px
+             }
+             .row .h2{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-600px
+             }
+             .row .rating2{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-590px;
+                
+                
+             }
+             .row .p2{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-580px
+             }
+             .row .h3{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-450px
+             }
+             .row .rating3{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-440px;
+                
+                
+             }
+             .row .p3{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-430px
+             }
+             .row .h4{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-300px
+             }
+             .row .rating4{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-290px;
+                
+                
+             }
+             .row .p4{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-280px
+             }
+             .row2 .hh1{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-430px
+             }
+             .row2 .rating11{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-420px;
+                
+                
+             }
+             .row2 .pp1{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-410px
+             }
+             .row2 .hh2{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-300px
+             }
+             .row2 .rating22{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-290px;
+                
+                
+             }
+             .row2 .pp2{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-280px
+             }
+             .row2 .hh3{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-150px
+             }
+             .row2 .rating33{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-140px;
+                
+                
+             }
+             .row2 .pp3{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-130px
+             }
+             .row2 .hh4{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-20px
+             }
+             .row2 .rating44{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-10px;
+                
+                
+             }
+             .row2 .pp4{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:0px
+             }
+            .container #menu{
+                position: relative;
+                left: -50px;
+            }
+            .container #home-menu{
+                position: relative;
+                left: 300px;
+
+            }
+           
+            
+        
+        }
+        /* .nav{
+            display: none;
+        } */
+        #home-menu{
+            width: 200px;
+            height: 230px;
+            background-color:#333;
+            position: relative;
+            top: -930px;
+            left: 1330px;
+            display: none;
+            
+            font-size: 20px;
+        }
+        #home-menu a{
+            color: white;
+
+        }
+       
+        #home-menu li{
+            margin-left: -30px;
+            list-style-type: none;
+            padding-top: 20px;
+            
+            
+            
+        }
+        #menu{
+            position: relative;
+            top: 20px;
+            left: 200px;
+            cursor: pointer;
+        }
+       
+       
+        
+        
+    </style>
+</head>
+<body>
+       
+    <div class="container">
+      
+
+        <nav class="nav2">
+            
+            <i class="fa-solid fa-bars fa-2xl" id="menu-toggle"></i>
+            <ul>
+                <li><a href="#" id="shirt">Shirts</a></li>
+                <li><a href="tshirt.html">t-Shirts</a></li>
+
+                <li><a href="pants.html">Pants</a></li>
+                <li><a href="shoe.html">Shoes</a></li>
+                <li><a href="slipper.html">Slippers</a></li>
+                <li><a href="innerware.html">innerwears</a></li>
+            </ul>
+            <i class="fa-solid fa-bars fa-2xl" id="menu" ></i>
+
+        </nav>
+       <div class="shirtcontainer">
+        <div class="row">
+            <img class="img" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/y/u/m/xl-hs-22001-white-voroxy-original-imagvtdczdzfbamq.jpeg?q=70">
+
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/7/j/v/m-fmsht2378-flying-machine-original-imah7jz9hg9fg9hj.jpeg?q=70">
+
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/s/t/g/-original-imah4wffwuafpjys.jpeg?q=70">
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/l45xea80/shirt/h/p/k/-original-imagf4ughwvhmz48.jpeg?q=70">
+
+            <h4 class="h1">White shirt</h4>
+            <div class="rating">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+            </div>
+            <p class="p1">₹999</p>
+            <h4 class="h2">maroon shirt</h4>
+            <div class="rating2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="p2">₹1299</p>
+            <h4 class="h3">Allen sully shirt</h4>
+            <div class="rating3">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="p3">₹1499</p>
+            <h4 class="h4">Allen sully shirt</h4>
+            <div class="rating4">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="p4">₹1899</p>
+        </div>
+        
+            <div class="row2">
+                <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/v/e/4/xl-1600-combraided-original-imah6t3ke8zzfs5x.jpeg?q=70">
+    
+                <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/g/o/j/m-ar-ml-5939-purple-showoff-original-imah88yyqeg6qpth.jpeg?q=70">
+    
+                <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/l/o/h/xxl-satin14-deemoon-original-imah7vthywjngp8h.jpeg?q=70">
+                <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/k/o/l/m-linen203-deemoon-original-imah5zyt3jgrhzzc.jpeg?q=70">
+
+                <h4 class="hh1">White shirt</h4>
+            <div class="rating11">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+            </div>
+            <p class="pp1">₹1799</p>
+            <h4 class="hh2">lines shirt</h4>
+            <div class="rating22">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+               
+                
+                
+            </div>
+            <p class="pp2">₹999</p>
+            <h4 class="hh3">Green shirt</h4>
+            <div class="rating33">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="pp3">₹1199</p>
+            <h4 class="hh4">white shirt</h4>
+            <div class="rating44">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="pp4">₹1999</p>
+    
+        </div>
+        <div id="home-menu">
+            <li><a href="ecommerce.html">Home</a></li>
+            <li><a href="Products.html">Shop</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </div>
+    </div>
+    <script>
+        // Toggle navigation menu on small screens
+        document.querySelector('#menu-toggle').addEventListener('click', function() {
+            document.querySelector('ul').classList.toggle('show');
+        });
+        var count=0
+        function toggle() {
+            count=count+1
+            document.getElementById("home-menu").style.display="block"
+            console.log(count)
+            
+            
+        }
+        function toggle_two() {
+            count=count+1
+            document.getElementById("home-menu").style.display="none" 
+            console.log(count)  
+        }
+
+        function calling(){
+            if(count%2==0){
+                toggle()
+            }
+            else{
+                toggle_two()
+
+            }
+        }
+        document.getElementById("menu").addEventListener("click",calling)
+    </script>
+</body>
+
+</html>

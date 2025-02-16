@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+            padding: 0px;
+            margin: 0px;
+    
+    }
+    #shoe{
+        color: gray;
+    }
+
+        nav{
+            width: 100%;
+            height: 50px;
+            background-color: lightgray;
+            display: flex;
+        }
+        ul{
+            display: flex;
+            gap: 50px;
+            font-size: 20px;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            margin-left:100px;
+            position: relative;
+            top: 10px;
+            
+            
+        }
+    .row1{
+            width: 100%;
+            height: 400px;
+            
+            margin-top: 20px;
+        }
+    .row1 img{
+            width: 300px;
+            height: 400px;
+            margin-left: 60px;
+
+        }
+        .row1 .h1{
+            position: relative;
+            top: 10px;
+            left: 120px;
+            font-size: 20px;
+        }
+        .row1 .rating{
+            position: relative;
+            left: 115px;
+            top: 20px;
+        }
+        .row1 .p1{
+            position: relative;
+            left: 140px;
+            top: 30px;
+            font-size: 20px;
+        }
+        .row1 .h2{
+            position: relative;
+            top: -50px;
+            left: 500px;
+            font-size: 20px;
+        }
+        .row1 .rating2{
+            position: relative;
+            left: 500px;
+            top: -40px;
+        }
+        .row1 .p2{
+            position: relative;
+            left: 530px;
+            top: -30px;
+            font-size: 20px;
+        }
+        .row1 .h3{
+            position: relative;
+            top: -110px;
+            left: 850px;
+            font-size: 20px;
+        }
+        .row1 .rating3{
+            position: relative;
+            left: 850px;
+            top: -100px;
+        }
+        .row1 .p3{
+            position: relative;
+            left: 880px;
+            top: -90px;
+            font-size: 20px;
+        }
+        .row1 .h4{
+            position: relative;
+            top: -170px;
+            left: 1200px;
+            font-size: 20px;
+        }
+        .row1 .rating4{
+            position: relative;
+            left: 1220px;
+            top: -160px;
+        }
+        .row1 .p4{
+            position: relative;
+            left: 1250px;
+            top: -150px;
+            font-size: 20px;
+        }
+        .row2{
+            width: 100%;
+            height: 400px;
+            
+            margin-top: 120px;
+        }
+        .row2 img{
+            width: 300px;
+            height: 400px;
+            margin-left: 60px;
+
+        }
+        .row2 .hh1{
+            position: relative;
+            top: 10px;
+            left: 120px;
+            font-size: 20px;
+        }
+        .row2 .rating11{
+            position: relative;
+            left: 115px;
+            top: 20px;
+        }
+        .row2 .pp1{
+            position: relative;
+            left: 140px;
+            top: 30px;
+            font-size: 20px;
+        }
+        .row2 .hh2{
+            position: relative;
+            top: -50px;
+            left: 500px;
+            font-size: 20px;
+        }
+        .row2 .rating22{
+            position: relative;
+            left: 500px;
+            top: -40px;
+        }
+        .row2 .pp2{
+            position: relative;
+            left: 530px;
+            top: -30px;
+            font-size: 20px;
+        }
+        .row2 .hh3{
+            position: relative;
+            top: -110px;
+            left: 850px;
+            font-size: 20px;
+        }
+        .row2 .rating33{
+            position: relative;
+            left: 850px;
+            top: -100px;
+        }
+        .row2 .pp3{
+            position: relative;
+            left: 880px;
+            top: -90px;
+            font-size: 20px;
+        }
+        .row2 .hh4{
+            position: relative;
+            top: -170px;
+            left: 1200px;
+            font-size: 20px;
+        }
+        .row2 .rating44{
+            position: relative;
+            left: 1220px;
+            top: -160px;
+        }
+        .row2 .pp4{
+            position: relative;
+            left: 1250px;
+            top: -150px;
+            font-size: 20px;
+        }
+        #menu-toggle{
+            display: none;
+            
+            cursor: pointer;
+        }
+        @media (max-width: 800px) {
+            nav {
+                justify-content: space-between;
+                background-color: transparent;
+            }
+
+            #menu-toggle {
+                display: block;
+                margin-top: 20px;
+            }
+
+            ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                background: #333;
+                width: 50%;
+                padding: 10px 0;
+            }
+
+            ul.show {
+                display: flex;
+            }
+
+           
+
+            ul li a {
+                color: white;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product {
+                width: 90%;
+            }
+             .row1 img{
+            width: 200px;
+            height: 200px;
+            gap: 10px;
+             }
+             .row2 img{
+                position: relative;
+                top: 295px;
+            width: 200px;
+            height: 200px;
+            gap: 10px;
+             }
+            
+            .row1 .h1{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-750px
+             }
+             .row1 .rating{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-740px;
+                
+                
+             }
+             .row1 .p1{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-730px
+             }
+             .row1 .h2{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-600px
+             }
+             .row1 .rating2{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-590px;
+                
+                
+             }
+             .row1 .p2{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-580px
+             }
+             .row1 .h3{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-450px
+             }
+             .row1 .rating3{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-440px;
+                
+                
+             }
+             .row1 .p3{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-430px
+             }
+             .row1 .h4{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-300px
+             }
+             .row1 .rating4{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-290px;
+                
+                
+             }
+             .row1 .p4{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-280px
+             }
+             .row2 .hh1{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-430px
+             }
+             .row2 .rating11{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-420px;
+                
+                
+             }
+             .row2 .pp1{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-410px
+             }
+             .row2 .hh2{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-300px
+             }
+             .row2 .rating22{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-290px;
+                
+                
+             }
+             .row2 .pp2{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-280px
+             }
+             .row2 .hh3{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-150px
+             }
+             .row2 .rating33{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-140px;
+                
+                
+             }
+             .row2 .pp3{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:-130px
+             }
+             .row2 .hh4{
+                font-size: 20px;
+                position: relative;
+                left: 300px;
+                top:-20px
+             }
+             .row2 .rating44{
+                font-size: 15px;
+                position: relative;
+                left: 300px;
+                top:-10px;
+                
+                
+             }
+             .row2 .pp4{
+                font-size: 20px;
+                position: relative;
+                left: 330px;
+                top:0px
+             }
+             .conatiner #menu{
+                position: relative;
+                left: -50px;
+            }
+            .conatiner #home-menu{
+                position: relative;
+                left: 300px;
+                top:-1610px;
+
+            }
+            
+        
+        }
+        #home-menu{
+            width: 200px;
+            height: 230px;
+            background-color:#333;
+            position: relative;
+            top: -1200px;
+            left: 1330px;
+            display: none;
+            
+            font-size: 20px;
+        }
+        #home-menu a{
+            color: white;
+
+        }
+       
+        #home-menu li{
+            margin-left: -30px;
+            list-style-type: none;
+            padding-top: 20px;
+            
+            
+            
+        }
+        #menu{
+            position: relative;
+            top: 20px;
+            left: 200px;
+            cursor: pointer;
+        }
+       
+       
+</style>
+<body>
+    <div class="conatiner">
+        <nav>
+            <i class="fa-solid fa-bars fa-2xl" id="menu-toggle"></i>
+
+            <ul>
+                <li><a href="Products.html">Shirts</a></li>
+                <li><a href="tshirt.html">t-Shirts</a></li>
+
+                <li><a href="pants.html" >Pants</a></li>
+                <li><a href="#" id="shoe">Shoes</a></li>
+                <li><a href="slipper.html">Slippers</a></li>
+                <li><a href="innerware.html">innerwears</a></li>
+            </ul>
+            <i class="fa-solid fa-bars fa-2xl" id="menu" ></i>
+
+        </nav>
+        <div class="row1">
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/b/z/c/8-cmndr-1205-wht-8-8-commander-ruling-feets-white-original-imah5gb8mnmrxeqe.jpeg?q=70">
+            
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/s/m/y/-original-imah4zhgjpzyymzd.jpeg?q=70">
+    
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/z/h/x/-original-imah5z8p94rn6wdx.jpeg?q=70">
+           
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/0/a/j/9-rkt-1205-9-atom-black-original-imah883fpqfmrnrb.jpeg?q=70">
+            <h4 class="h1">Stylish White Shoe</h4>
+            <div class="rating">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+            </div>
+            <p class="p1">₹1999</p>
+
+            <h4 class="h2">Nike Black Shoe</h4>
+            <div class="rating2">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="p2">₹3299</p>
+
+            <h4 class="h3">White Shoe</h4>
+            <div class="rating3">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="p3">₹1499</p>
+            <h4 class="h4">Stylish Black Shoe</h4>
+            <div class="rating4">
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                
+                
+            </div>
+            <p class="p4">₹4899</p>
+    
+        </div>
+        <div class="row2">
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/z/z/k/5-fb-1229bk-5-nivia-multicolor-original-imah4mbztgeqrqhg.jpeg?q=70">
+
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/0/t/9-8316571-9-bata-black-original-imah45cxfv9wymqs.jpeg?q=70">
+
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/y/z/r/7-pg0442-7-7-ajanta-brown-original-imah4c9mqnezgug5.jpeg?q=70">
+
+            <img class="_53J4C-" alt="" src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/s/o/u/7-superstar-02-7-asian-navy-pgreen-original-imah9ywduuejdsyk.jpeg?q=70">
+            <h4 class="hh1">Black Shoe</h4>
+        <div class="rating11">
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            
+        </div>
+        <p class="pp1">₹1799</p>
+        <h4 class="hh2">Black Formal Shoe</h4>
+        <div class="rating22">
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+           
+            
+            
+        </div>
+        <p class="pp2">₹1599</p>
+        <h4 class="hh3">Brown Formal Shoe</h4>
+        <div class="rating33">
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            
+            
+        </div>
+        <p class="pp3">₹1999</p>
+        <h4 class="hh4">Stylish Colored Shoe</h4>
+        <div class="rating44">
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            
+            
+        </div>
+        <p class="pp4">₹2999</p>
+        <div id="home-menu">
+            <li><a href="ecommerce.html">Home</a></li>
+            <li><a href="Products.html">Shop</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </div>
+       
+    </div>
+    <script>
+        // Toggle navigation menu on small screens
+        document.querySelector('#menu-toggle').addEventListener('click', function() {
+            document.querySelector('ul').classList.toggle('show');
+        });
+        var count=0
+        function toggle() {
+            count=count+1
+            document.getElementById("home-menu").style.display="block"
+            console.log(count)
+            
+            
+        }
+        function toggle_two() {
+            count=count+1
+            document.getElementById("home-menu").style.display="none" 
+            console.log(count)  
+        }
+
+        function calling(){
+            if(count%2==0){
+                toggle()
+            }
+            else{
+                toggle_two()
+
+            }
+        }
+        document.getElementById("menu").addEventListener("click",calling)
+    </script>
+</body>
+</html>
